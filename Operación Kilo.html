@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operación Kilo - Voluntariado La Salle 2026</title>
+    <style>
+        /* --- ESTILO PREMIUM (Unificado) --- */
+        :root {
+            --azul-fondo: #2c3e50;      
+            --azul-marino: #1a252f;     
+            --blanco-puro: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background-color: var(--azul-fondo); 
+            display: flex; 
+            flex-direction: column; 
+            min-height: 100vh; 
+            font-weight: 400;
+        }
+
+        /* --- HEADER BLANCO --- */
+        header { 
+            background-color: var(--blanco-puro); 
+            padding: 45px 20px; 
+            text-align: center; 
+            box-shadow: 0 2px 15px rgba(0,0,0,0.2); 
+        }
+        header h1 { 
+            font-size: 2.4rem; 
+            letter-spacing: -1px; 
+            font-weight: 400; 
+            color: var(--azul-marino);
+        }
+
+        /* --- MENÚ CON EFECTO LÍQUIDO --- */
+        nav.menu { display: flex; justify-content: center; gap: 25px; padding: 60px 20px; flex-wrap: wrap; }
+        
+        .menu-btn { 
+            text-decoration: none; 
+            background-color: var(--blanco-puro); 
+            color: var(--azul-marino); 
+            width: 250px; 
+            height: 70px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            border-radius: 4px; 
+            font-size: 17px; 
+            border: 1px solid var(--azul-marino); 
+            position: relative; 
+            overflow: hidden; 
+            transition: all 0.4s ease; 
+            z-index: 1;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .menu-btn::before {
+            content: "";
+            position: absolute;
+            top: 100%; 
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--azul-marino); 
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: -1;
+        }
+
+        .menu-btn:hover {
+            color: var(--blanco-puro); 
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+        }
+
+        .menu-btn:hover::before { top: 0; }
+
+        /* --- CONTENEDOR PRINCIPAL --- */
+        .container { flex: 1; display: flex; justify-content: center; padding: 0 20px 100px 20px; }
+
+        .main-content { 
+            width: 100%; 
+            max-width: 850px; 
+            background: var(--blanco-puro); 
+            padding: 60px; 
+            border-radius: 8px; 
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3); 
+            text-align: center; 
+        }
+
+        /* --- CAJA DE IMAGEN PEQUEÑA --- */
+        .img-box { 
+            overflow: hidden; 
+            border-radius: 4px; 
+            margin: 0 auto 40px; 
+            max-width: 400px; 
+            border: 1px solid #eee;
+            padding: 8px;
+            background: #f9f9f9;
+        }
+        .img-box img { 
+            width: 100%; 
+            height: auto; 
+            display: block; 
+            transition: transform 0.5s ease; 
+            border-radius: 2px;
+        }
+        .img-box:hover img { transform: scale(1.05); }
+
+        /* --- TEXTOS --- */
+        h2 { font-weight: 400; margin-bottom: 25px; color: #333; font-size: 2rem; }
+        p { font-size: 1.1rem; line-height: 1.8; color: #555; text-align: justify; margin-bottom: 25px; font-weight: 400; }
+
+        footer { 
+            padding: 40px; 
+            text-align: center; 
+            color: var(--azul-marino); 
+            background: var(--blanco-puro); 
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <header><h1>Operación Kilo</h1></header>
+
+    <nav class="menu">
+        <a href="PAGINA HTML NCA.html" class="menu-btn">🏠 Inicio</a>
+        <a href="Voluntariados dentro de la zona incluyendo el colegio.html" class="menu-btn">⬅ Volver</a>
+        <a href="quienes somos.html" class="menu-btn">¿Quiénes somos?</a>
+    </nav>
+
+    <div class="container">
+        <main class="main-content">
+            <section>
+                <h2>Recogida Solidaria de Alimentos</h2>
+                
+                <div class="img-box">
+                    <!-- Imagen de ejemplo, cámbiala por la tuya cuando la tengas -->
+                    <img src="https://images.unsplash.com" alt="Operación Kilo">
+                </div>
+
+                <p>
+                    La Operación Kilo es una de las campañas más emblemáticas de nuestro colegio. En 2026, seguimos comprometidos con la recogida de alimentos no perecederos para ayudar a las familias más necesitadas de nuestro entorno y colaborar con el Banco de Alimentos.
+                </p>
+                
+                <p>
+                    Los alumnos voluntarios se encargan de la organización, clasificación y empaquetado de las donaciones recibidas. Es una oportunidad perfecta para concienciarnos sobre la importancia de la solidaridad directa en nuestra comunidad local.
+                </p>
+
+                <h3 style="color: #DB7093; font-style: italic; font-size: 1.4rem; margin-top: 20px; font-weight: 400;">
+                    "Mucha gente pequeña, en lugares pequeños, haciendo cosas pequeñas, puede cambiar el mundo."
+                </h3>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        &copy; 2026 Proyecto Voluntariado - Institución La Salle
+    </footer>
+
+</body>
+</html>
+
+
+

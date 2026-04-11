@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Voluntariado La Salle 2026</title>
+    <style>
+        /* --- PALETA DE COLORES PREMIUM --- */
+        :root {
+            --azul-fondo: #2c3e50;
+            --azul-marino: #1a252f;
+            --blanco-puro: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--azul-fondo);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- HEADER BLANCO --- */
+        header {
+            background-color: var(--blanco-puro);
+            padding: 45px 20px;
+            text-align: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+        }
+        header h1 {
+            font-size: 2.4rem;
+            letter-spacing: -1px;
+            font-weight: 400;
+            color: var(--azul-marino);
+        }
+
+        /* --- MENÚ DE BOTONES --- */
+        nav.menu { display: flex; justify-content: center; gap: 25px; padding: 60px 20px; flex-wrap: wrap; }
+
+        .menu-btn {
+            text-decoration: none;
+            background-color: var(--blanco-puro);
+            color: var(--azul-marino);
+            /* Tamaño fijo para todos los botones */
+            width: 250px; /* Ajusta este valor según necesites */
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            font-size: 17px;
+            border: 1px solid var(--azul-marino);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            z-index: 1;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            /* Centra el texto si es necesario, aunque flex ya lo hace */
+            text-align: center;
+        }
+
+        .menu-btn::before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--azul-marino);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: -1;
+        }
+
+        .menu-btn:hover {
+            color: var(--blanco-puro);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+        }
+
+        .menu-btn:hover::before { top: 0; }
+
+        /* --- CONTENIDO PRINCIPAL --- */
+        .container { flex: 1; display: flex; justify-content: center; padding: 0 20px 100px 20px; }
+
+        .main-content {
+            width: 100%;
+            max-width: 950px;
+            background: var(--blanco-puro);
+            padding: 70px;
+            border-radius: 8px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* --- LOGO Y ZOOM --- */
+        .logo-box {
+            overflow: hidden;
+            border: 1px solid #eee;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 4px;
+        }
+
+        .zoom-img {
+            /* Tamaño específico para la imagen del logo */
+            width: 300px; /* Ancho deseado */
+            height: 200px; /* Alto deseado */
+            object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+            cursor: zoom-in;
+            transition: transform 0.5s ease;
+        }
+
+        .zoom-img:hover { transform: scale(1.02); }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 40px;
+            text-align: center;
+            color: var(--azul-marino);
+            background: var(--blanco-puro);
+            border-top: 1px solid #eee;
+        }
+
+        /* --- MODAL ZOOM --- */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            max-width: 85%;
+            animation: zoomIn 0.3s ease;
+            border-radius: 4px;
+            /* Asegura que la imagen del modal tenga un tamaño razonable */
+            max-height: 85vh;
+            width: auto; /* Permite que el ancho se ajuste al alto si es necesario */
+        }
+        @keyframes zoomIn { from {transform: scale(0.8); opacity: 0;} to {transform: scale(1); opacity: 1;} }
+        .close { position: absolute; top: 20px; right: 40px; color: white; font-size: 50px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bienvenidos a nuestra página</h1>
+    </header>
+
+    <nav class="menu">
+        <a href="quienes somos.html" class="menu-btn">¿Quiénes somos?</a>
+        <a href="Donde encontrarnos.html" class="menu-btn">📍 Ubicación</a>
+        <a href="Voluntariados dentro de la zona incluyendo el colegio.html" class="menu-btn">Voluntariados</a>
+    </nav>
+
+    <div class="container">
+        <main class="main-content">
+            <div class="logo-box">
+                <img src="https://colegioslasalle.org/wp-content/uploads/2024/10/logo-NCA-cas-300x200.png" class="zoom-img" alt="Logo NCA">
+            </div>
+            <p style="margin-top: 35px; color: #555; font-size: 1.2rem; font-style: italic;">            </p>
+        </main>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="imgModal">
+    </div>
+
+    <footer>
+        &copy; 2026 Proyecto Voluntariado - Institución La Salle
+    </footer>
+
+    <script>
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("imgModal");
+        var span = document.getElementsByClassName("close")[0];
+
+        document.querySelectorAll('.zoom-img').forEach(image => {
+            image.onclick = function(){
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            }
+        });
+
+        span.onclick = function() { modal.style.display = "none"; }
+        window.onclick = function(event) { if (event.target == modal) modal.style.display = "none"; }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
