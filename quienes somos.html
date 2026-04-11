@@ -11,7 +11,6 @@
             --azul-marino: #1a252f;     
             --blanco-puro: #ffffff;
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body { 
@@ -21,7 +20,6 @@
             flex-direction: column; 
             min-height: 100vh; 
         }
-
         /* --- HEADER BLANCO --- */
         header { 
             background-color: var(--blanco-puro); 
@@ -35,10 +33,8 @@
             font-weight: 400; 
             color: var(--azul-marino);
         }
-
         /* --- MENÚ DE BOTONES (Tamaño unificado 320px) --- */
-        nav.menu { display: flex; justify-content: center; gap: 25px; padding: 60px 20px; flex-wrap: wrap; }
-        
+        nav.menu { display: flex; justify-content: center; gap: 25px; padding: 60px 20px; flex-wrap: wrap; }   
         .menu-btn { 
             text-decoration: none; 
             background-color: var(--blanco-puro); 
@@ -57,7 +53,6 @@
             z-index: 1;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-
         .menu-btn::before {
             content: "";
             position: absolute;
@@ -69,18 +64,14 @@
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             z-index: -1;
         }
-
         .menu-btn:hover {
             color: var(--blanco-puro); 
             transform: translateY(-5px);
             box-shadow: 0 12px 25px rgba(0,0,0,0.3);
         }
-
         .menu-btn:hover::before { top: 0; }
-
         /* --- CONTENIDO PRINCIPAL --- */
         .container { flex: 1; display: flex; justify-content: center; padding: 0 20px 100px 20px; }
-
         .main-content { 
             width: 100%; 
             max-width: 950px; 
@@ -90,10 +81,8 @@
             box-shadow: 0 20px 50px rgba(0,0,0,0.3); 
             text-align: center; 
         }
-
         /* --- IMÁGENES (Tamaño unificado 400px de ancho) --- */
         .image-container { margin-top: 35px; display: flex; flex-direction: row; justify-content: center; gap: 25px; flex-wrap: wrap; }
-        
         .zoom-img { 
             width: 400px; /* Ancho fijo para todas las imágenes */
             max-width: 100%; /* Asegura que no se salgan en pantallas pequeñas */
@@ -106,7 +95,6 @@
             padding: 10px;
         }
         .zoom-img:hover { transform: scale(1.03); }
-
         /* --- MODAL --- */
         .modal { 
             display: none; 
@@ -128,7 +116,6 @@
         }
         @keyframes zoomIn { from {transform: scale(0.8); opacity: 0;} to {transform: scale(1); opacity: 1;} }
         .close { position: absolute; top: 20px; right: 40px; color: white; font-size: 50px; cursor: pointer; }
-
         /* --- FOOTER --- */
         footer { 
             padding: 40px; 
@@ -140,17 +127,14 @@
     </style>
 </head>
 <body>
-
     <header>
         <h1>¿Quiénes somos?</h1>
     </header>
-
     <nav class="menu">
         <a href="index.html" class="menu-btn">🏠 Inicio</a>
         <a href="Donde encontrarnos.html" class="menu-btn">📍 Ubicación</a>
         <a href="Voluntariados dentro de la zona incluyendo el colegio.html" class="menu-btn">Voluntariados</a>
     </nav>
-
     <div class="container">
         <main class="main-content">
             <section>
@@ -158,11 +142,9 @@
                 <p style="font-size: 1.2rem; line-height: 1.8; color: #555; margin-bottom: 30px; text-align: justify;">
                     Nosotros somos un grupo de Bachillerato de NCA del colegio Institución La Salle, cuyo proyecto está relacionado con el ODS 17: Alianzas para lograr los objetivos. Trabajamos para conectar personas y recursos en favor de nuestra comunidad.
                 </p>
-                
                 <h3 style="color: #DB7093; font-style: italic; font-size: 1.4rem; margin-bottom: 40px; font-weight: 400;">
                     "Crear alianzas para ayudar es fundamental para evolucionar."
                 </h3>
-                
                 <div class="image-container">
                     <img src="6937.jpg" class="zoom-img" alt="Imagen Grupo">
                     <img src="17-alianzas-para-lograr-los-objetivos-3.jpg" class="zoom-img" alt="Logo ODS 17">
@@ -170,22 +152,18 @@
             </section>
         </main>
     </div>
-
     <div id="myModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="imgModal">
     </div>
-
     <footer>
         &copy; 2026 Proyecto Voluntariado - Institución La Salle
     </footer>
-
     <script>
         // Obtener referencias a los elementos del DOM
         var modal = document.getElementById("myModal");
         var modalImg = document.getElementById("imgModal");
         var closeBtn = document.querySelector(".close");
-
         // Selecciona todas las imágenes con la clase 'zoom-img'
         document.querySelectorAll('.zoom-img').forEach(image => { 
             // Añade un 'event listener' para el clic en cada imagen
@@ -194,10 +172,8 @@
                 modalImg.src = this.src; // Establece la fuente de la imagen del modal a la imagen clicada
             } 
         });
-
         // Cierra el modal cuando se hace clic en el botón de cerrar
         closeBtn.onclick = () => modal.style.display = "none";
-        
         // Cierra el modal cuando se hace clic fuera de la imagen del modal
         window.onclick = (event) => { 
             if (event.target == modal) { // Verifica si el clic ocurrió directamente en el modal (fondo oscuro)
@@ -205,7 +181,6 @@
             } 
         }
     </script>
-
 </body>
 </html>
 
