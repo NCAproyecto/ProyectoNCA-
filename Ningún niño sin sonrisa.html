@@ -11,9 +11,7 @@
             --azul-marino: #1a252f;     
             --blanco-puro: #ffffff;
         }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }        
         body { 
             font-family: 'Segoe UI', sans-serif; 
             background-color: var(--azul-fondo); 
@@ -22,7 +20,6 @@
             min-height: 100vh; 
             font-weight: 400;
         }
-
         /* --- HEADER BLANCO --- */
         header { 
             background-color: var(--blanco-puro); 
@@ -36,10 +33,8 @@
             font-weight: 400; 
             color: var(--azul-marino);
         }
-
         /* --- MENÚ CON EFECTO LÍQUIDO --- */
         nav.menu { display: flex; justify-content: center; gap: 25px; padding: 60px 20px; flex-wrap: wrap; }
-        
         .menu-btn { 
             text-decoration: none; 
             background-color: var(--blanco-puro); 
@@ -58,7 +53,6 @@
             z-index: 1;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-
         .menu-btn::before {
             content: "";
             position: absolute;
@@ -70,18 +64,14 @@
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             z-index: -1;
         }
-
         .menu-btn:hover {
             color: var(--blanco-puro); 
             transform: translateY(-5px);
             box-shadow: 0 12px 25px rgba(0,0,0,0.3);
         }
-
         .menu-btn:hover::before { top: 0; }
-
         /* --- CONTENEDOR PRINCIPAL --- */
         .container { flex: 1; display: flex; justify-content: center; padding: 0 20px 100px 20px; }
-
         .main-content { 
             width: 100%; 
             max-width: 850px; 
@@ -91,7 +81,6 @@
             box-shadow: 0 20px 50px rgba(0,0,0,0.3); 
             text-align: center; 
         }
-
         /* --- CAJA DE IMAGEN PEQUEÑA --- */
         .img-box { 
             overflow: hidden; 
@@ -110,11 +99,9 @@
             border-radius: 2px;
         }
         .img-box:hover img { transform: scale(1.05); }
-
         /* --- TEXTOS --- */
         h2 { font-weight: 400; margin-bottom: 25px; color: #333; font-size: 2rem; }
         p { font-size: 1.1rem; line-height: 1.8; color: #555; text-align: justify; margin-bottom: 25px; font-weight: 400; }
-
         footer { 
             padding: 40px; 
             text-align: center; 
@@ -125,44 +112,35 @@
     </style>
 </head>
 <body>
-
     <header><h1>Ningún Niño Sin Sonrisa</h1></header>
-
     <nav class="menu">
         <a href="index.html" class="menu-btn">🏠 Inicio</a>
         <a href="Voluntariados dentro de la zona incluyendo el colegio.html" class="menu-btn">⬅ Volver</a>
         <a href="quienes somos.html" class="menu-btn">¿Quiénes somos?</a>
     </nav>
-
     <div class="container">
         <main class="main-content">
             <section>
-                <h2>Nuestro Proyecto</h2>
-                
+                <h2>Nuestro Proyecto</h2>      
                 <div class="img-box">
                     <!-- Imagen de ejemplo de niños/juguetes -->
                     <img src="https://images.unsplash.com" alt="Proyecto Sonrisa">
                 </div>
-
                 <p>
                     Somos un grupo de alumnos de <strong>La Salle Institución</strong> con un proyecto que quiere llegar a mucha gente. Porque cuidar es evolucionar y juntos podemos hacer que la sociedad sea mucho mejor. 
-                </p>
-                
+                </p>   
                 <p>
                     Nuestro objetivo es promocionar y dar a conocer las iniciativas que existen en el instituto para que tanto entre secciones como fuera del centro, sean conocidos y el número de voluntarios dispuestos a colaborar aumenten. Este proyecto se centra especialmente en que todos los niños tengan acceso a la alegría y el juego, especialmente en épocas señaladas.
                 </p>
-
                 <h3 style="color: #DB7093; font-style: italic; font-size: 1.4rem; margin-top: 20px; font-weight: 400;">
                     "Cuidar es evolucionar."
                 </h3>
             </section>
         </main>
     </div>
-
     <footer>
         &copy; 2026 Proyecto Voluntariado - Institución La Salle
     </footer>
-
 </body>
 </html>
 
