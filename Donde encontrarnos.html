@@ -12,9 +12,7 @@
             --blanco-puro: #ffffff;
             --google-blue: #4285F4;
         }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }  
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             background-color: var(--azul-fondo); 
@@ -22,7 +20,6 @@
             flex-direction: column; 
             min-height: 100vh; 
         }
-
         header { 
             background-color: var(--blanco-puro); 
             padding: 45px 20px; 
@@ -35,9 +32,7 @@
             font-weight: 400; 
             color: var(--azul-marino);
         }
-
-        nav.menu { display: flex; justify-content: center; gap: 25px; padding: 60px 20px; flex-wrap: wrap; }
-        
+        nav.menu { display: flex; justify-content: center; gap: 25px; padding: 60px 20px; flex-wrap: wrap; }    
         .menu-btn { 
             text-decoration: none; 
             background-color: var(--blanco-puro); 
@@ -56,7 +51,6 @@
             z-index: 1;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-
         .menu-btn::before {
             content: "";
             position: absolute;
@@ -68,17 +62,13 @@
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             z-index: -1;
         }
-
         .menu-btn:hover {
             color: var(--blanco-puro); 
             transform: translateY(-5px);
             box-shadow: 0 12px 25px rgba(0,0,0,0.3);
         }
-
         .menu-btn:hover::before { top: 0; }
-
         .container { flex: 1; display: flex; justify-content: center; padding: 0 20px 100px 20px; }
-
         .main-wrapper { 
             width: 100%; 
             max-width: 950px; 
@@ -88,7 +78,6 @@
             box-shadow: 0 20px 50px rgba(0,0,0,0.3); 
             text-align: center; 
         }
-
         .map-container { 
             width: 100%; 
             height: 450px; 
@@ -97,10 +86,8 @@
             border: 1px solid #eee; 
             margin-bottom: 35px; 
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
+        } 
         iframe { width: 100%; height: 100%; border: 0; }
-
         .btn-google { 
             display: inline-block; 
             padding: 20px 45px; 
@@ -113,12 +100,10 @@
             transition: all 0.3s ease; 
             box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3); 
         }
-
         .btn-google:hover {
             background-color: #3367d6;
             transform: scale(1.05);
         }
-
         footer { 
             padding: 40px; 
             text-align: center; 
@@ -128,30 +113,24 @@
     </style>
 </head>
 <body>
-
     <header>
         <h1>¿Dónde encontrarnos?</h1>
     </header>
-
     <nav class="menu">
         <a href="index.html" class="menu-btn">🏠 Inicio</a>
         <a href="quienes somos.html" class="menu-btn">¿Quiénes somos?</a>
         <a href="Voluntariados dentro de la zona incluyendo el colegio.html" class="menu-btn">Voluntariados</a>
     </nav>
-
     <div class="container">
         <main class="main-wrapper">
-            <h2 style="margin-bottom:30px; font-weight:400; font-size:2.2rem; color: var(--azul-marino);">📍 Nuestra Ubicación Exacta</h2>
-            
+            <h2 style="margin-bottom:30px; font-weight:400; font-size:2.2rem; color: var(--azul-marino);">📍 Nuestra Ubicación Exacta</h2>          
             <div class="map-container">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2706.943854557839!2d-3.776373288867801!3d40.37836837132667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41884fded4de7b%3A0x782ef7af484de21b!2sColegio%20Instituci%C3%B3n%20La%20Salle!5e1!3m2!1ses!2ses!4v1773749163271!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-
             <!-- ENLACE CORREGIDO: Lleva directamente a la ubicación del colegio -->
             <a href="https://www.google.com/maps/place/Colegio+Instituci%C3%B3n+La+Salle/@40.3783684,-3.7763733,622m/data=!3m2!1e3!4b1!4m6!3m5!1s0xd41884fded4de7b:0x782ef7af484de21b!8m2!3d40.3783684!4d-3.773793!16s%2Fg%2F119w13vk_?entry=ttu&g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn-google">🚀 CÓMO LLEGAR</a>
         </main>
     </div>
-
     <footer>
         <p>&copy; 2026 Proyecto Voluntariado - Institución La Salle</p>
     </footer>
