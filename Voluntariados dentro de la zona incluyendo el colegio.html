@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voluntariado La Salle - Inicio</title>
     <style>
-        /* --- ESTILO PREMIUM (Basado en Quiénes Somos) --- */
+        /* --- ESTILO PREMIUM --- */
         :root {
             --azul-fondo: #2c3e50;      
             --azul-marino: #1a252f;     
@@ -13,7 +13,7 @@
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }     
         body { 
-            font-family: 'Segoe UI', sans-serif; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             background-color: var(--azul-fondo); 
             display: flex; 
             flex-direction: column; 
@@ -38,7 +38,7 @@
             text-decoration: none; 
             background-color: var(--blanco-puro); 
             color: var(--azul-marino); 
-            width: 300px; 
+            width: 280px; 
             height: 75px; 
             display: flex; 
             align-items: center; 
@@ -69,6 +69,7 @@
             box-shadow: 0 12px 25px rgba(0,0,0,0.3);
         }
         .menu-btn:hover::before { top: 0; }
+        
         /* --- CONTENEDOR Y PANELES --- */
         .container { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 30px; padding: 0 20px 100px; }
         .white-box { 
@@ -80,14 +81,26 @@
             box-shadow: 0 20px 50px rgba(0,0,0,0.3); 
             text-align: center; 
         }
-        .horizontal-scroll-container { width: 100%; overflow-x: auto; scrollbar-width: none; border-radius: 4px; }
-        .horizontal-scroll-container::-webkit-scrollbar { display: none; }
+        .horizontal-scroll-container { 
+            width: 100%; 
+            overflow-x: auto; 
+            scrollbar-width: thin; 
+            border-radius: 4px; 
+            scroll-behavior: smooth;
+        }
         .horizontal-track { display: flex; gap: 20px; width: max-content; padding: 10px; }
-        .panel { width: 450px; height: 300px; flex-shrink: 0; overflow: hidden; border-radius: 4px; border: 1px solid #eee; }
+        .panel { width: 400px; height: 280px; flex-shrink: 0; overflow: hidden; border-radius: 4px; border: 1px solid #eee; }
         .panel img { width: 100%; height: 100%; object-fit: cover; cursor: zoom-in; transition: 0.3s; }
-        .panel img:hover { transform: scale(1.03); }
+        .panel img:hover { transform: scale(1.05); }
+
         /* --- LISTA DE PROYECTOS --- */
-        .links-voluntariados { text-align: left; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding-top: 20px; }
+        .links-voluntariados { 
+            text-align: left; 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 15px; 
+            padding-top: 20px; 
+        }
         .links-voluntariados a { 
             color: var(--azul-marino); 
             text-decoration: none; 
@@ -97,64 +110,83 @@
             background: #f9f9f9; 
             transition: 0.3s; 
             border: 1px solid #eee; 
+            display: block;
         }
         .links-voluntariados a:hover { 
             background: var(--azul-marino); 
             color: white; 
             transform: translateX(10px); 
         }
+
         /* --- MODAL ZOOM --- */
-        .modal-zoom { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; justify-content: center; align-items: center; }
+        .modal-zoom { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; justify-content: center; align-items: center; cursor: pointer; }
         .modal-zoom img { max-width: 85%; max-height: 80vh; border-radius: 4px; animation: zoomIn 0.3s ease; }
         @keyframes zoomIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
         footer { 
             padding: 40px; 
             text-align: center; 
             color: var(--azul-marino); 
             background: var(--blanco-puro); 
             border-top: 1px solid #eee;
+            margin-top: auto;
         }
     </style>
 </head>
 <body>
-    <header><h1>Voluntariado La Salle</h1></header>
+    <header>
+        <h1>Voluntariado La Salle</h1>
+    </header>
+
     <nav class="menu">
-        <a href="index.html" class_="menu-btn">🏠 Inicio</a>
-        <a href="quienes somos.html" class="menu-btn">¿Quiénes somos?</a>
-        <a href="Voluntariados dentro de la zona incluyendo el colegio.html" class="menu-btn">Voluntariados</a>
-        <a href="Donde encontrarnos.html" class="menu-btn">📍 Ubicación</a>
+        <a href="index.html" class="menu-btn">🏠 Inicio</a>
+        <a href="quienes%20somos.html" class="menu-btn">¿Quiénes somos?</a>
+        <a href="Voluntariados%20dentro%20de%20la%20zona%20incluyendo%20el%20colegio.html" class="menu-btn">Voluntariados</a>
+        <a href="Donde%20encontrarnos.html" class="menu-btn">📍 Ubicación</a>
     </nav>
+
     <div class="container">
+        <!-- Galería Deslizable -->
         <main class="white-box">
             <div class="horizontal-scroll-container">
                 <div class="horizontal-track">
-                    <div class="panel"><img src="unnamed (1).jpg"></div>
-                    <div class="panel"><img src="WhatsApp Image 2026-03-13 at 11.50.17.jpeg"></div>
-                    <div class="panel"><img src="unnamed (2).jpg"></div>
-                    <div class="panel"><img src="6937.jpg"></div>
-                    <div class="panel"><img src="unnamed (3).jpg"></div>
-                    <div class="panel"><img src="operación-kilo.jpg"></div>
+                    <div class="panel"><img src="unnamed (1).jpg" alt="Imagen 1"></div>
+                    <div class="panel"><img src="WhatsApp Image 2026-03-13 at 11.50.17.jpeg" alt="Imagen 2"></div>
+                    <div class="panel"><img src="unnamed (2).jpg" alt="Imagen 3"></div>
+                    <div class="panel"><img src="6937.jpg" alt="Imagen 4"></div>
+                    <div class="panel"><img src="unnamed (3).jpg" alt="Imagen 5"></div>
+                    <div class="panel"><img src="operación-kilo.jpg" alt="Imagen 6"></div>
                 </div>
             </div>
         </main>
+
+        <!-- Sección de Enlaces -->
         <section class="white-box">
             <h2 style="font-weight: 400; margin-bottom: 25px; color: #333; font-size: 1.8rem;">Nuestros Proyectos</h2>
             <div class="links-voluntariados">
                 <a href="Ni2.html">➵ Espacio Ni2</a>
-                <a href="Cenas solidarias.html">➵ Cenas Solidarias</a>
-                <a href="Escuela de Español.html">➵ Escuela de Español</a>
-                <a href="Operación Kilo.html">➵ Operación Kilo</a>
-                <a href="Hogar de San José.html">➵ Hogar de San José</a>
-                <a href="Visitas a la residencia.html">➵ Visitas a la residencia</a>
-                <a href="Otro mundo es necesario.html">➵ Otro mundo es necesario</a>
-                <a href="Ningún niño sin sonrisa.html">➵ Ningún niño sin sonrisa</a>
+                <a href="Cenas%20solidarias.html">➵ Cenas Solidarias</a>
+                <a href="Escuela%20de%20Español.html">➵ Escuela de Español</a>
+                <a href="Operación%20Kilo.html">➵ Operación Kilo</a>
+                <a href="Hogar%20de%20San%20José.html">➵ Hogar de San José</a>
+                <a href="Visitas%20a%20la%20residencia.html">➵ Visitas a la residencia</a>
+                <a href="Otro%20mundo%20es%20necesario.html">➵ Otro mundo es necesario</a>
+                <a href="Ningún%20niño%20sin%20sonrisa.html">➵ Ningún niño sin sonrisa</a>
             </div>
         </section>
     </div>
+
+    <!-- Modal para zoom de imágenes -->
     <div class="modal-zoom" id="modalZoom" onclick="this.style.display='none'">
-        <img id="imgAmpliada" src="">
+        <img id="imgAmpliada" src="" alt="Imagen ampliada">
     </div>
+
+    <footer>
+        &copy; 2026 Proyecto Voluntariado - Institución La Salle
+    </footer>
+
     <script>
+        // Función para el zoom de las imágenes
         document.querySelectorAll('.panel img').forEach(img => { 
             img.onclick = function() { 
                 const modal = document.getElementById('modalZoom');
@@ -164,9 +196,9 @@
             } 
         });
     </script>
-    <footer>&copy; 2026 Proyecto Voluntariado - Institución La Salle</footer>
 </body>
 </html>
+
 
 
 
